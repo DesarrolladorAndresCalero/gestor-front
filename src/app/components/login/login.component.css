@@ -1,0 +1,93 @@
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 820px;
+    background: linear-gradient(135deg, #f0f4f8, #e6f7ff);
+}
+
+.login-card {
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    color: #37474F;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #263238;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Inputs con mejor contraste */
+mat-form-field {
+    background: transparent;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 🔵 Fondo más claro para inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #90a4ae !important;
+    background-color: #ffffff !important; /* Blanco puro */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    color: #263238 !important; /* Texto oscuro */
+}
+
+/* 🔵 Corrige el placeholder que se ve muy tenue */
+input::placeholder {
+    color: #455a64 !important; /* Gris oscuro, más visible */
+}
+
+/* ✅ Botón ahora SI será verde, no negro */
+button {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #00796b !important; /* Color verde azulado */
+    color: white !important;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+/* 🎨 Si sigues viendo el botón negro, esto lo obliga a cambiar */
+button:hover {
+    background-color: #004d40 !important; 
+    transform: scale(1.05);
+}
+
+/* 🛑 Esto debería eliminar la letra morada */
+button span {
+    color: white !important;
+}
+
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

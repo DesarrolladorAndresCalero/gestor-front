@@ -1,0 +1,68 @@
+<div class="bienvenida">
+    <h2>Bienvenido, {{ usuario?.nombre }} 👋</h2>
+  </div>
+  
+  <mat-card class="tabla-card">
+    <div class="header-con-boton">
+        <mat-card-title>📋 Listado de Servicios</mat-card-title>
+        <div>
+            <button mat-raised-button color="primary" (click)="abrirFormulario()">Añadir Nuevo Servicio</button>
+            <button mat-raised-button color="primary" (click)="abrirFormulario()">Historial de servicio</button>
+        </div>
+      </div>
+    <mat-card-content>
+      <table mat-table [dataSource]="servicios" class="mat-elevation-z8 tabla-estilizada">
+        
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let servicio"> {{ servicio.nombre }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef> Descripción </th>
+          <td mat-cell *matCellDef="let servicio"> {{ servicio.descripcion }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="horaInicio">
+          <th mat-header-cell *matHeaderCellDef> Hora Inicio </th>
+          <td mat-cell *matCellDef="let servicio"> {{ servicio.horaInicio }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="horaFin">
+          <th mat-header-cell *matHeaderCellDef> Hora Fin </th>
+          <td mat-cell *matCellDef="let servicio"> {{ servicio.horaFin }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="precio">
+          <th mat-header-cell *matHeaderCellDef> Precio </th>
+          <td mat-cell *matCellDef="let servicio"> ${{ servicio.precio }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="duracion">
+          <th mat-header-cell *matHeaderCellDef> Duración </th>
+          <td mat-cell *matCellDef="let servicio"> {{ servicio.duracion }} min </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="estado">
+          <th mat-header-cell *matHeaderCellDef> Estado </th>
+          <td mat-cell *matCellDef="let servicio"> 
+            <span class="estado" [ngClass]="{'activo': servicio.estado === 'Activo', 'inactivo': servicio.estado === 'Inactivo'}">
+              {{ servicio.estado }}
+            </span>
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let servicio">
+            <button mat-raised-button color="primary"> Editar</button>
+            <button mat-raised-button color="primary"> Eliminar</button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  
