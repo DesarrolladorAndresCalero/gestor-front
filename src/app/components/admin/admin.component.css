@@ -26,6 +26,7 @@ h2{
 .tabla-card {
     max-width: 90%;
     margin: 0 auto;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
     background: #1e1e1e; /* Gris oscuro */

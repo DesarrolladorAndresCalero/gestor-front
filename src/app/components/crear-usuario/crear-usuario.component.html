@@ -1,0 +1,27 @@
+<h2>Crear Usuario</h2>
+<form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
+  <mat-form-field class="full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="contrasena" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Tipo de Usuario</mat-label>
+    <mat-select formControlName="tipoUsuario">
+      <mat-option value="ADMIN">Admin</mat-option>
+      <mat-option value="CLIENTE">Cliente</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Crear</button>
+</form>

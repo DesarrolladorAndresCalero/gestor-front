@@ -1,0 +1,156 @@
+/* Fondo general */
+body {
+    background-color: #121212; /* Fondo oscuro */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* Texto claro */
+}
+
+h2{
+    color: black;
+}
+
+.title{
+ color: white;
+}
+
+/* Mensaje de bienvenida */
+.bienvenida {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* Blanco */
+}
+
+/* Tarjeta contenedora de la tabla */
+.tabla-card {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #1e1e1e; /* Gris oscuro */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para la tabla */
+.tabla-estilizada {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para las cabeceras de la tabla */
+th {
+    background-color: #2a2a2a !important; /* Gris oscuro */
+    color: #ffffff !important;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilo para las filas */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #444; /* Línea divisoria gris */
+    color: #ddd; /* Texto claro */
+}
+
+/* Alternar color de filas */
+tr:nth-child(even) {
+    background-color: #232323 !important; /* Gris oscuro suave */
+}
+
+tr:nth-child(odd) {
+    background-color: #1e1e1e !important; /* Gris más oscuro */
+}
+
+/* Estados */
+.estado {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.activo {
+    background-color: #4caf50 !important; /* Verde */
+    color: #ffffff !important;
+}
+
+.inactivo {
+    background-color: #d32f2f !important; /* Rojo */
+    color: #ffffff !important;
+}
+
+/* Botones de acción */
+button {
+    margin-right: 5px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button.editar {
+    background-color: #1976d2 !important; /* Azul */
+    color: #ffffff !important;
+}
+
+button.eliminar {
+    background-color: #d32f2f !important; /* Rojo */
+    color: #ffffff !important;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Corregir fondo de la tabla */
+.mat-table {
+    background-color: #1e1e1e !important; /* Fondo oscuro */
+    color: #ddd !important; /* Texto claro */
+    border-radius: 10px; /* Bordes suaves */
+}
+
+/* Asegurar que las cabeceras tengan un color oscuro */
+.mat-header-row {
+    background-color: #2a2a2a !important; /* Gris oscuro */
+    color: #ffffff !important;
+}
+
+/* Estilo para las celdas */
+.mat-row, .mat-cell {
+    background-color: #1e1e1e !important; /* Fondo oscuro */
+    color: #ddd !important; /* Texto claro */
+}
+
+/* Alternar colores de fila */
+.mat-row:nth-child(even) {
+    background-color: #232323 !important; /* Gris oscuro suave */
+}
+
+.mat-row:nth-child(odd) {
+    background-color: #1e1e1e !important; /* Gris más oscuro */
+}
+
+/* Estilo para el título dentro de la tarjeta */
+mat-card-title {
+    color: #ffffff !important; /* Blanco */
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.header-con-boton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  button[color="primary"] {
+    background-color: #4caf50 !important; /* Verde */
+    color: white !important;
+    font-weight: bold;
+  }
+  

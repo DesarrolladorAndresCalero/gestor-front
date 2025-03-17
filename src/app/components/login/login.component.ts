@@ -27,13 +27,17 @@ export class LoginComponent {
         console.log("Respuesta de la API:", usuario);
   
         if (usuario) {
-          localStorage.setItem('usuario', JSON.stringify(usuario)); // Guardar usuario en localStorage
+          localStorage.setItem('usuario', JSON.stringify(usuario)); // Guarda el usuario completo
+          localStorage.setItem('adminId', usuario.id.toString()); // Guarda solo el ID
+  
+          console.log("✅ ID guardado en localStorage:", usuario.id); // Verifica el ID
+  
           if (usuario.tipoUsuario === 'ADMIN') {
             console.log("Redirigiendo a /admin...");
-            this.router.navigate(['/admin']); // Redirigir a admin
+            this.router.navigate(['/admin']); 
           } else {
             console.log("Redirigiendo a /cliente...");
-            this.router.navigate(['/CLIENTE']); // Redirigir a cliente
+            this.router.navigate(['/cliente']);
           }
         } else {
           this.errorMessage = 'Correo o contraseña incorrectos';

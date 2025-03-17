@@ -13,4 +13,16 @@ export class ServicioService {
   obtenerServicios(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  crearServicio(servicio: any, adminId: number): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/crear?adminId=${adminId}`, servicio);
+  }
+  
+  
+  
+
+  eliminarServicio(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/eliminar/${id}`);
+  }
+  
 }
