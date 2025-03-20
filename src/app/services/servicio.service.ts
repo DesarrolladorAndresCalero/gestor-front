@@ -17,9 +17,7 @@ export class ServicioService {
   crearServicio(servicio: any, adminId: number): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/crear?adminId=${adminId}`, servicio);
   }
-  
-  
-  
+    
 
   eliminarServicio(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/eliminar/${id}`);
